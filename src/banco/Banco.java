@@ -12,7 +12,7 @@ public class Banco {
         minhaConta.numero = 1234;
         //minhaConta.nome = "Sarah dos Santos Oliveira";
         minhaConta.limite = 3591.36d;
-        minhaConta.saldo = 2578.2d;
+        minhaConta.setSaldo(2000.00);
         
         System.out.print("Insira o nome do correntista: ");
         String nome = input.nextLine();
@@ -24,7 +24,11 @@ public class Banco {
         
         valor = inputNumber.nextDouble();
         minhaConta.deposita(valor);
-        System.out.println("Saldo atualizado: " + minhaConta.saldo);
+        System.out.println("Saldo atualizado: " + minhaConta.getSaldo());
+        
+        System.out.print("Insira um valor para sacar: ");
+        double saque = inputNumber.nextDouble();
+        minhaConta.sacar(saque);
         
     }
     
